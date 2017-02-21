@@ -242,4 +242,25 @@ describe Listing do
       expect(listing.average_review_rating).to eq(2.5)
     end
   end  
+
+  describe ".available" do
+    before do
+      Reservation.create(listing: listing, checkin: Date.new(2017, 1, 1), checkout: Date.new(2017, 2, 1))
+    end
+
+    let(:listing) { listing = Listing.create(title: "Foo") }
+
+    it "returns all listings for trivial date range" do
+      all = Listing.available(Date.new(1800, 1, 1), Date.new(1800,1,1)).count
+      expect(all).to eq(Listing.count)
+    end
+    it "returns listing if no reservations conflict with date range" do
+      avail = Listing.available(Date.new(2016, 1, 2), Date.new(2016, 1, 5))
+      expect(avail).to include(listing)
+    end
+    it "does not return listing with conflict" do
+      conflict = Listing.available(Date.new(2017, 1, 2), Date.new(2017, 1, 5))
+      expect(conflict).not_to include(listing)
+    end
+  end
 end
