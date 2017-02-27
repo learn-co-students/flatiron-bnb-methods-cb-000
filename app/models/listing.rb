@@ -10,16 +10,22 @@ class Listing < ActiveRecord::Base
   end
 
   private
+
   def self.available(start_date, end_date)
-    if start_date && end_date
-      joins(:reservations).
-        where.not(reservations: {
-          checkin: start_date..end_date,
-          checkout: start_date..end_date
-      }).
-      distinct
-    else
-      []
-    end
+    query = <<~SQL
+      SELECT DISTINCT listings.*
+        FROM listings
+        LEFT JOIN (
+          SELECT listings.id
+          FROM listings
+          JOIN reservations
+          ON listings.id = reservations.listing_id
+          WHERE :start_date BETWEEN reservations.checkin AND reservations.checkout
+          OR :end_date BETWEEN reservations.checkin AND reservations.checkout
+        ) AS booked
+        ON listings.id = booked.id
+       WHERE booked.id IS NULL
+    SQL
+    self.find_by_sql [query, {start_date: start_date, end_date: end_date}]
   end
 end
