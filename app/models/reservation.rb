@@ -4,7 +4,7 @@ class Reservation < ActiveRecord::Base
   has_one :review
 
   validates :checkin, :checkout, presence: :true
-  # validate :available, :checkout_after_checkin, :guest_and_host_not_same
+  validate :available, :checkout_after_checkin, :guest_and_host_not_same
 
 
   def duration

@@ -27,6 +27,7 @@ describe Reservation do
 
   describe 'reservation validations' do
     before(:each) do 
+      @validres = Reservation.new(checkin: '2019-01-01', checkout: '2019-01-30', guest_id: User.find_by(id: 4).id, listing_id: Listing.first.id)
       @invalidcheckin = Reservation.new(checkout: '2014-01-30', guest_id: User.find_by(id: 4).id, listing_id: Listing.first.id)
       @invalidcheckout = Reservation.new(checkin:  '2014-01-30', guest_id: User.find_by(id: 5).id, listing_id: Listing.find_by(id: 2).id)
       @invalid_same_ids = Reservation.new(checkin: '2014-04-25', checkout: '2014-04-30', listing_id: 1, guest_id: 1)
@@ -38,7 +39,7 @@ describe Reservation do
     end
 
     it 'is valid with a checkin and checkout' do 
-      expect(@reservation1).to be_valid
+      expect(@validres).to be_valid
     end
 
     it 'is invalid without a checkin' do

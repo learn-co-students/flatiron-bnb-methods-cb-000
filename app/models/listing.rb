@@ -5,11 +5,24 @@ class Listing < ActiveRecord::Base
   has_many :reviews, :through => :reservations
   has_many :guests, :class_name => "User", :through => :reservations
 
+  validates :listing_type, :address, :price, :description, :neighborhood_id, :title, presence: true
+
+  after_save :update_host_status
+  after_destroy :update_host_status
+
   def available?(start_date, end_date)
     self.class.available(start_date, end_date).include?(self)
   end
 
+  def average_review_rating
+    reviews.average(:rating)
+  end
+
   private
+
+  def update_host_status
+    host.update_host_status
+  end
 
   def self.available(start_date, end_date)
     query = <<~SQL
