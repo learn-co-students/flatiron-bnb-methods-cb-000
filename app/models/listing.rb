@@ -28,4 +28,17 @@ class Listing < ActiveRecord::Base
     SQL
     self.find_by_sql [query, {start_date: start_date, end_date: end_date}]
   end
+
+  def self.most_res
+    query = <<~SQL
+      SELECT listings.*, count(*) as res_count
+      FROM listings
+      LEFT JOIN reservations
+      ON listings.id = reservations.listing_id
+      GROUP BY listings.id
+      ORDER BY res_count DESC
+      LIMIT 1
+    SQL
+    self.find_by_sql [query]
+  end
 end
