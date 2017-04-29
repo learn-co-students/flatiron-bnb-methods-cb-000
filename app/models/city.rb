@@ -2,8 +2,10 @@ class City < ActiveRecord::Base
   has_many :neighborhoods
   has_many :listings, :through => :neighborhoods
 
+  include Reservable::InstanceMethods
+  extend Reservable::ClassMethods
+
   def  city_openings(start_date, end_date)
-    selected_listings = []
     self.listings.select do |listing|
       listing.reservations.all? { |reservation| start_date.to_date >= reservation.checkout &&  reservation.checkin <= end_date.to_date}
     end
