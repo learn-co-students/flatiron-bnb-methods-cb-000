@@ -15,9 +15,7 @@ module Reservable
      end
 
      def most_res
-       all.max do |first, second|
-         first.all_reservations <=> second .all_reservations
-       end
+       all.max { |first, second|  first.all_reservations <=> second .all_reservations }
      end
    end
 end
