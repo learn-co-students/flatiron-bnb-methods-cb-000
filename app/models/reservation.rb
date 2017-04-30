@@ -4,7 +4,7 @@ class Reservation < ActiveRecord::Base
   has_one :review
 
   validates :checkin, :checkout, presence: true
-  validate :valid_checkout_checkin?
+  validate :valid_checkout_checkin?, :is_guest_not_host?
 
   def duration
     (checkout - checkin).to_i
@@ -12,6 +12,12 @@ class Reservation < ActiveRecord::Base
 
   def total_price
     listing.price * duration
+  end
+
+  def is_guest_not_host?
+    if guest == listing.host
+      errors.add(:guest_id, "You cannot book your own listing.")
+    end
   end
 
   private

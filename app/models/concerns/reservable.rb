@@ -6,18 +6,12 @@ module Reservable
        end
        total_reservations.sum
      end
-
-     def listing_ratio
-       if listings.count > 0
-         all_reservations.to_f / listings.count.to_f
-       else
-         0.0 # return a floating point of 0.0 to avoid nil ratio
-       end
-     end
    end
 
    module ClassMethods
      def highest_ratio_res_to_listings
+       listings_array = self.all.select { |element| !element.listings.empty? } # find all non-empty models of the current model
+       listings_array.max { |first, second| first.all_reservations/first.listings.size <=> second.all_reservations/second.listings.size} # compare each element in non-empty listing array
      end
 
      def most_res
