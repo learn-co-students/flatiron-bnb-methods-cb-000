@@ -5,4 +5,12 @@ class Neighborhood < ActiveRecord::Base
   include Reservable::InstanceMethods
   extend Reservable::ClassMethods
 
+  def neighborhood_openings(start_date, end_date)
+       listings.reject do |listing|
+         listing.reservations.any? do |reservation|
+           reservation.checkin <= Date.parse(end_date) && reservation.checkout >= Date.parse(start_date)
+         end
+     end
+  end
+
 end
