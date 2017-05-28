@@ -12,8 +12,7 @@ class Listing < ActiveRecord::Base
   after_destroy :detract_host_status
 
   def self.available(start_date, end_date)
-    left_outer_joins(:reservations).
-    merge(Reservation.not_overlap(start_date, end_date))
+    where.not(id: Reservation.overlap(start_date, end_date).select(:listing_id))
   end
 
   def average_review_rating

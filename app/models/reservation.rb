@@ -3,10 +3,8 @@ class Reservation < ActiveRecord::Base
   belongs_to :guest, :class_name => "User"
   has_many :review
 
-  def self.not_overlap(start_date, end_date)
-    date_range = start_date..end_date
-    
-    where.not(checkin: date_range, checkout: date_range).
-    or(where(listing_id: nil))
+  def self.overlap(start_date, end_date)
+    where(checkin: start_date..end_date).
+    or(where(checkout: start_date..end_date))
   end
 end
