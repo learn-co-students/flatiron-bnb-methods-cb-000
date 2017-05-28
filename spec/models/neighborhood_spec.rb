@@ -17,10 +17,6 @@ describe Neighborhood do
     it 'knows about all the available listings given a date range' do
       expect(@nabe1.neighborhood_openings('2014-05-01', '2014-05-05')).to include(@listing2)
       expect(@nabe1.neighborhood_openings('2014-05-01', '2014-05-05')).to_not include(@listing1)
-
-      # checkin: '2014-04-25', checkout: '2014-04-30', listing_id: @listing1.id
-      # checkin: '2014-05-02', checkout: '2014-05-08', listing_id: @listing1.id
-      # checkin: '2014-05-10', checkout: '2014-05-15', listing_id: @listing1.id
     end
   end
 
