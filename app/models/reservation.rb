@@ -37,7 +37,7 @@ class Reservation < ActiveRecord::Base
 
   def dates_are_available
     if !available?
-      errors.add(:availability, 'Your dates are not available.')
+      errors.add(:invald_dates, 'Your dates are not available.')
     end
   end
 
@@ -45,7 +45,7 @@ class Reservation < ActiveRecord::Base
     return unless checkin && checkout
 
     if checkout < checkin
-      errors.add(:invalid_checkout, "Your check-out date needs to be after your check-in.")
+      errors.add(:invald_dates, "Your check-out date needs to be after your check-in.")
     end
   end
 
