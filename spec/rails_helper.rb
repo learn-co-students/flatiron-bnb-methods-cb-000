@@ -70,6 +70,7 @@ def make_denver
         guest_id: "#{guest_id}",
         status: "accepted"
       )
+      
       checkin_day += 5
     end
   end

@@ -30,7 +30,7 @@ class Reservation < ActiveRecord::Base
   end
 
   def guest_and_host_not_same_user
-    if listing_id == guest_id
+    if listing.host.id == guest_id
       errors.add(:invalid_guest, 'Guest and host can\'t be the same user')
     end
   end

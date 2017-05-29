@@ -13,7 +13,7 @@ module Reservable
     end
 
     def most_res
-      highest_reservations_by self.table_name
+      highest_reservations_by table_name
     end
 
     def highest_reservations_by(table_name)
