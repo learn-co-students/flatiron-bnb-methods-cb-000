@@ -3,5 +3,5 @@ class City < ActiveRecord::Base
   include Reservable::InstanceMethods
 
   has_many :neighborhoods
-  has_many :listings, :through => :neighborhoods
+  has_many :listings, through: :neighborhoods
 end
