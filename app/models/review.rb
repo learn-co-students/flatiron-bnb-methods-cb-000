@@ -11,7 +11,7 @@ class Review < ActiveRecord::Base
 
  def reservation_status_accepted
 
-    if self.reservation && (self.reservation && self.reservation.checkout > Time.now && self.reservation.status != "accepted")
+    if self.reservation && (self.reservation.checkout > Time.now || self.reservation.status != "accepted")
       errors.add(:reservation, "Must checkout to leave a review")
     end
   end
