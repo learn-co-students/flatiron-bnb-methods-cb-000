@@ -1,4 +1,5 @@
 class Neighborhood < ActiveRecord::Base
+  #neighborhood_associations: city - neighborhood - listings - reservations
   belongs_to :city
   has_many :listings
   has_many :reservations, through: :listings

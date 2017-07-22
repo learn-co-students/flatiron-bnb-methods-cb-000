@@ -1,5 +1,5 @@
 class Listing < ActiveRecord::Base
-  # Listings relationships
+  #listing_associations: city - neighborhood - listing - host && reservations - guest && review
   belongs_to :neighborhood
   belongs_to :host, :class_name => "User"
   has_many :reservations
@@ -20,14 +20,13 @@ class Listing < ActiveRecord::Base
 
   private
 
-  #Changing the User's status as a host
+  #changing the User's status as a host based on listing creation or deletion
   def change_user_to_host
     self.host.update(host: true)
   end
+
   def change_user_to_non_host
-    if self.host.listings.count == 1
-      self.host.update(host: false)
-    end
+    self.host.update(host: false) if self.host.listings.count == 1
   end
 
 end

@@ -1,4 +1,5 @@
 class City < ActiveRecord::Base
+  #city_associations: city - neighborhoods - listings - reservations
   has_many :neighborhoods
   has_many :listings, :through => :neighborhoods
   has_many :reservations, through: :listings

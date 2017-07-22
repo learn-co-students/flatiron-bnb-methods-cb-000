@@ -1,6 +1,7 @@
 module Reservable
   extend ActiveSupport::Concern
 
+  #classes_with_access: :city, :neighborhood
   module InstanceMethods
     def openings(start_date, end_date)
       self.listings.collect do |listing|
@@ -11,6 +12,7 @@ module Reservable
     end
   end
 
+  #classes_with_access: :city, :neighborhood
   module ClassMethods
     def highest_ratio_res_to_listings
       self.has_listings.max_by { |location| location.reservations.count / location.listings.count }

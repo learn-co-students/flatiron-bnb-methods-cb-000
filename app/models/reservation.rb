@@ -6,7 +6,6 @@ class Reservation < ActiveRecord::Base
   validates_presence_of :checkin, :checkout
   validate :visitor_is_not_host
   validate :listing_is_available_for_reservation
-  validate :invalid_checkin_and_checkout_input
 
   def duration
     (checkout - checkin).to_i
