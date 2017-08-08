@@ -1,0 +1,375 @@
+
+Reservation
+  associations
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+    has a checkin time
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+    has a checkout time
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+    has a status, default is pending
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+    belongs to a guest
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+    belongs to a listing
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+    has a review
+  reservation validations
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:2014-04-25/CheckOut:2014-04-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+    is valid with a checkin and checkout (FAILED - 1)
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:/CheckOut:2014-01-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+    is invalid without a checkin (FAILED - 2)
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:2014-01-30/CheckOut:
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+    is invalid without a checkout (FAILED - 3)
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:2014-04-25/CheckOut:2014-04-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+    validates that you cannot make a reservation on your own listing
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:2014-04-26/CheckOut:2014-05-28
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+    validates that a listing is available at checkin before making reservation
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:2014-04-20/CheckOut:2014-04-26
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+    validates that a listing is available at checkout before making reservation
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:2014-04-26/CheckOut:2014-04-28
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+    validates that a listing is available at for both checkin and checkout before making reservation
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:2014-05-23/CheckOut:2014-05-20
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+	Existing CheckIns:2014-05-10/CheckOuts:2014-05-15
+    validates that checkin is before checkout
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+CheckIn:2014-05-23/CheckOut:2014-05-23
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+	Existing CheckIns:2014-05-10/CheckOuts:2014-05-15
+    validates that checkin and checkout dates are not the same
+  instance methods
+    #duration
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+      knows about its duration based on checkin and checkout dates
+    #total_price
+CheckIn:2014-04-25/CheckOut:2014-04-30
+CheckIn:2014-03-10/CheckOut:2014-03-25
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+CheckIn:2014-06-02/CheckOut:2014-06-30
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+CheckIn:2014-05-02/CheckOut:2014-05-08
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+CheckIn:2014-05-10/CheckOut:2014-05-15
+	Existing CheckIns:2014-04-25/CheckOuts:2014-04-30
+	Existing CheckIns:2014-03-10/CheckOuts:2014-03-25
+	Existing CheckIns:2014-06-02/CheckOuts:2014-06-30
+	Existing CheckIns:2014-05-02/CheckOuts:2014-05-08
+Duration:5/Price:50.0
+      knows about its total price
+
+Failures:
+
+  1) Reservation reservation validations is valid with a checkin and checkout
+     Failure/Error: expect(@reservation1).to be_valid
+       expected #<Reservation id: 1, checkin: "2014-04-25", checkout: "2014-04-30", listing_id: 1, guest_id: 4, created_at: "2017-08-08 04:01:00", updated_at: "2017-08-08 04:01:00", status: "accepted"> to be valid, but got errors: Guest Reservation dates are not available.
+     # ./spec/models/reservation_spec.rb:41:in `block (3 levels) in <top (required)>'
+
+  2) Reservation reservation validations is invalid without a checkin
+     Failure/Error: expect(@invalidcheckin).to_not be_valid
+     NoMethodError:
+       undefined method `<=' for nil:NilClass
+       Did you mean?  <=>
+     # ./app/models/reservation.rb:48:in `block in listing_is_available'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:46:in `each'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:46:in `each'
+     # ./app/models/reservation.rb:46:in `listing_is_available'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:427:in `block in make_lambda'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:189:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:190:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:190:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:190:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:190:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_validate_callbacks'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activemodel-4.2.0/lib/active_model/validations.rb:395:in `run_validations!'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activemodel-4.2.0/lib/active_model/validations/callbacks.rb:113:in `block in run_validations!'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_validation_callbacks'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activemodel-4.2.0/lib/active_model/validations/callbacks.rb:113:in `run_validations!'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activemodel-4.2.0/lib/active_model/validations.rb:334:in `valid?'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activerecord-4.2.0/lib/active_record/validations.rb:58:in `valid?'
+     # ./spec/models/reservation_spec.rb:45:in `block (3 levels) in <top (required)>'
+
+  3) Reservation reservation validations is invalid without a checkout
+     Failure/Error: expect(@invalidcheckout).to_not be_valid
+     ArgumentError:
+       comparison of Date with nil failed
+     # ./app/models/reservation.rb:48:in `<='
+     # ./app/models/reservation.rb:48:in `block in listing_is_available'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:46:in `each'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:46:in `each'
+     # ./app/models/reservation.rb:46:in `listing_is_available'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:427:in `block in make_lambda'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:189:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:190:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:190:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:190:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:190:in `block in simple'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_validate_callbacks'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activemodel-4.2.0/lib/active_model/validations.rb:395:in `run_validations!'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activemodel-4.2.0/lib/active_model/validations/callbacks.rb:113:in `block in run_validations!'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_validation_callbacks'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activemodel-4.2.0/lib/active_model/validations/callbacks.rb:113:in `run_validations!'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activemodel-4.2.0/lib/active_model/validations.rb:334:in `valid?'
+     # /usr/local/rvm/gems/ruby-2.3.1/gems/activerecord-4.2.0/lib/active_record/validations.rb:58:in `valid?'
+     # ./spec/models/reservation_spec.rb:49:in `block (3 levels) in <top (required)>'
+
+Finished in 3.13 seconds (files took 4.22 seconds to load)
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/reservation_spec.rb:40 # Reservation reservation validations is valid with a checkin and checkout
+rspec ./spec/models/reservation_spec.rb:44 # Reservation reservation validations is invalid without a checkin
+rspec ./spec/models/reservation_spec.rb:48 # Reservation reservation validations is invalid without a checkout
+
