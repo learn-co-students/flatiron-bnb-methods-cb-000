@@ -221,10 +221,10 @@ describe Listing do
 
   describe "#average_review_rating" do
     before do 
-      recent_reservation = Reservation.create(listing: listing, checkin: 10.days.ago, checkout: 5.days.ago, status: 'accepted')
-      older_reservation = Reservation.create(listing: listing, checkin: 30.days.ago, checkout: 29.days.ago, status: 'accepted')
-      review = Review.create(rating: 1, description: 'it was good', reservation_id: recent_reservation.id)
-      other_review = Review.create(rating: 4, description: 'also good', reservation_id: older_reservation.id)
+      recent_reservation = Reservation.create!(listing: listing, checkin: 10.days.ago, checkout: 5.days.ago, status: 'accepted', guest: User.find(1))
+      older_reservation = Reservation.create!(listing: listing, checkin: 30.days.ago, checkout: 29.days.ago, status: 'accepted', guest: User.find(1))
+      review = Review.create!(rating: 1, description: 'it was good', reservation_id: recent_reservation.id)
+      other_review = Review.create!(rating: 4, description: 'also good', reservation_id: older_reservation.id)
     end
     
     
@@ -242,4 +242,26 @@ describe Listing do
       expect(listing.average_review_rating).to eq(2.5)
     end
   end  
+
+  describe ".available" do
+    before do
+      Reservation.create!(listing: listing, checkin: Date.new(2017, 1, 1), checkout: Date.new(2017, 2, 1), guest: User.find(1))
+      listing.reload
+    end
+
+    let(:listing) { listing = Listing.last}
+
+    it "returns all listings for trivial date range" do
+      all = Listing.available(Date.new(1800, 1, 1), Date.new(1800,1,1)).count
+      expect(all).to eq(Listing.count)
+    end
+    it "returns listing if no reservations conflict with date range" do
+      avail = Listing.available(Date.new(2016, 1, 2), Date.new(2016, 1, 5))
+      expect(avail).to include(listing)
+    end
+    it "does not return listing with conflict" do
+      conflict = Listing.available(Date.new(2017, 1, 2), Date.new(2017, 1, 5))
+      expect(conflict).not_to include(listing)
+    end
+  end
 end
