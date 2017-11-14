@@ -5,7 +5,7 @@ class City < ActiveRecord::Base
 
   def city_openings(start_date, end_date)
     #given date parameters, query for listings that have these dates available
-    binding.pry
+    # binding.pry
   end
 
 end
