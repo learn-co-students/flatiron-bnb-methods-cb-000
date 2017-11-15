@@ -15,6 +15,11 @@ class Listing < ActiveRecord::Base
   after_destroy :destroy_host
 
 
+  def count_res
+    binding.pry
+    self.map{|l| l.reservations}.sum.count
+  end
+
   def available?(start_date, end_date)
     #expect to return true if listing is available
 
