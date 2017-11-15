@@ -51,7 +51,7 @@ describe Reservation do
     end
 
     it 'validates that you cannot make a reservation on your own listing' do
-      binding.pry
+      # binding.pry
       expect(@invalid_same_ids).to_not be_valid
     end
 

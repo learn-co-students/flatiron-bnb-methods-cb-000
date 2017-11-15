@@ -15,10 +15,10 @@ class Listing < ActiveRecord::Base
   after_destroy :destroy_host
 
 
-  def count_res
-    binding.pry
-    self.map{|l| l.reservations}.sum.count
-  end
+  # def count_res
+  #   # binding.pry
+  #   self.map{|l| l.reservations}.sum.count
+  # end
 
   def available?(start_date, end_date)
     #expect to return true if listing is available
@@ -29,21 +29,21 @@ class Listing < ActiveRecord::Base
     # 3. If a reservation overlaps, not available
     # 4. return status
     available = true
-    puts "Checking reservations for #{self}"
+
     self.reservations.each do |r|
-      puts "comparing reservation for #{self}: #{r.id}:#{r.checkin} until #{r.checkout}"
+
       if [start_date, r.checkin].max < [end_date, r.checkout].min
-        puts "Checking this listing is taken for #{start_date} to #{end_date}! #{r} #{r.checkin} #{r.checkout}"
+
         available = false
-        puts "should return false"
+
         return available
       else
-        puts "this booking date does not overlap for  #{start_date} to #{end_date}! #{r} #{r.checkin} #{r.checkout}"
+
         # binding.pry
       end
     end
     # binding.pry
-    puts "finished checking.  Listing #{self} is available = #{available} for #{start_date} to #{end_date}"
+    
     return available
   end
 

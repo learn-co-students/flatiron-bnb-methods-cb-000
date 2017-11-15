@@ -11,14 +11,19 @@ class Reservation < ActiveRecord::Base
   # checkout time after checkin time
 
   def hostIsNotGuest
-    
+
   end
 
-  # def checkin
-  # end
-  #
-  # def checkout
-  # end
+  def duration
+    #given instance of reservation, returns length of stay.  checkout - checkin
+    # binding.pry
+    (checkout - checkin).to_i
+  end
+
+  def total_price
+    #assume this takes duration and multiplies by price
+    duration * self.listing.price.to_f
+  end
 
 
 end

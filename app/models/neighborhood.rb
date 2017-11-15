@@ -24,7 +24,7 @@ class Neighborhood < ActiveRecord::Base
         total = place.listings.map{|l| l.reservations}.sum.count
         # total = c.listings.map{|l| l.reservations}.sum.count
         if total / place.listings.count > top_ratio
-          puts "new winner! #{place.name}"
+          
           top_place = place
           top_ratio = total / place.listings.count
         end
@@ -40,9 +40,9 @@ class Neighborhood < ActiveRecord::Base
     self.all.each do |place|
       if place.listings.count > 0
         total = place.listings.map{|l| l.reservations}.sum.count
-        puts "#{place} has #{total} reservations"
+
         if total > top_res
-          puts "new winner! #{place.name}"
+
           top_place = place
           top_res = total
         end

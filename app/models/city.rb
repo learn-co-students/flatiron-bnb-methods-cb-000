@@ -9,7 +9,7 @@ class City < ActiveRecord::Base
     start_date = start_date_string.to_date
     end_date = end_date_string.to_date
     self.listings.each do |listing|
-      puts "Comparing current reservations for listing #{listing.id}"
+      
       if listing.available?(start_date, end_date)
         # puts "City model says: listing is available! #{listing} for #{self}"
         openings << listing
@@ -34,7 +34,7 @@ class City < ActiveRecord::Base
     City.all.each do |c|
       total = c.listings.map{|l| l.reservations}.sum.count
       if total / c.listings.count > top_ratio
-        puts "new winner! #{c.name}"
+
         top_city = c
         top_ratio = total / c.listings.count
       end
@@ -52,9 +52,9 @@ class City < ActiveRecord::Base
         # try this: total = c.listings.map{|l| l.reservations}.count
 
         total = c.listings.map{|l| l.reservations}.sum.count
-        puts "#{c} has #{total} reservations"
+
         if total > top_res
-          puts "new winner! #{c.name}"
+
           top_city = c
           top_res = total
         end
