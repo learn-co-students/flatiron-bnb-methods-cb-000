@@ -26,4 +26,29 @@ class City < ActiveRecord::Base
     # binding.pry
   end
 
+  def self.highest_ratio_res_to_listings
+    # For each city, get count of reservations and listings
+    # return max
+    # start with first city as assumption.
+    # compare city1 with city2.  If city 2 is more, replace assumptionn with city 1
+
+    binding.pry
+    # Failure/Error: expect(City.highest_ratio_res_to_listings).to eq(City.find_by(:name => "NYC"))
+  end
+
+    def self.most_res
+      # assume first city
+      top_city = City.first
+      top_res = 0
+      City.all.each do |c|
+        total = c.listings.map{|l| l.reservations}.sum.count
+        if total > top_res
+          top_city = c
+        end
+      end
+      top_city
+    end
+
+
+
 end
