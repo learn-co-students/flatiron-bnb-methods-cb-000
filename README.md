@@ -1,3 +1,26 @@
+Starting point: 68 tests, 35 failures
+EOD: 68 tests, 22 failures
+Next:
+
+The #city_openings method should return all of the Listing objects that are available for the entire span that is inputted. (NOTE: This isn't easy. Check the resources below and try out a few things in console until you're satisfied with your solution. Don't be afraid to google!)
+
+Bug:
+When I check (('2014-05-01', '2014-05-05')) should return false for listing1
+expect(City.first.city_openings('2014-05-01', '2014-05-05')).to_not include(@listing1)
+
+@listing1 reservations
+  @reservation1 = Reservation.create(checkin: '2014-04-25', checkout: '2014-04-30', listing_id: @listing1.id, guest_id: @logan.id, :status => "accepted")
+  @reservation4 = Reservation.create(checkin: '2014-05-02', checkout: '2014-05-08', listing_id: @listing1.id, guest_id: @tristan.id, :status => "accepted")
+  @reservation5 = Reservation.create(checkin: '2014-05-10', checkout: '2014-05-15', listing_id: @listing1.id, guest_id: @logan.id, :status => "accepted")
+
+
+
+take date range as input, and collect array of listings that match this.
+1. Compare date ranges to find openings
+2. If open, push to array?
+3. return array
+
+
 # Flatiron-bnb: Methods
 
 In the previous iteration, we built out our model associations and migrated our database. Now we're going to work on building useful methods (class and instance) for rendering data and our own validations. We're doing this to follow the principle that our controllers should be skinny, our models fat, so therefore our views have very little logic in them.
