@@ -7,7 +7,9 @@ class Review < ActiveRecord::Base
 
   def checked_out?
     if self.reservation
-      Date.today - self.reservation.checkout >= 0
+      if Date.today - self.reservation.checkout <= 0
+        errors.add(:reservation, "You must wait until after checkout to write a review.")
+      end
     end
   end
 end

@@ -5,10 +5,12 @@ class User < ActiveRecord::Base
   has_many :reviews, :foreign_key => 'guest_id'
 
   def check_user_type
-    if self.listings != 0
-      self.host = true
-    else
+    if self.listings.empty?
       self.host = false
+      self.save
+    else
+      self.host = true
+      self.save
     end
   end
 

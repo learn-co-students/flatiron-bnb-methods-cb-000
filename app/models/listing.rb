@@ -5,7 +5,7 @@ class Listing < ActiveRecord::Base
   has_many :reviews, :through => :reservations
   has_many :guests, :class_name => "User", :through => :reservations
 
-  after_save :check_user_type
+  after_create :check_user_type
   after_destroy :check_user_type
 
   validates :address, :listing_type, :title, :description, :price, :neighborhood_id, presence: true
