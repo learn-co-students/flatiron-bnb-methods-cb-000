@@ -4,6 +4,14 @@ class User < ActiveRecord::Base
   has_many :trips, :foreign_key => 'guest_id', :class_name => "Reservation"
   has_many :reviews, :foreign_key => 'guest_id'
 
+  ##As guest
+  has_many :trip_listings, :through => :trips, :source => :listing
+  has_many :hosts, :through => :trip_listings, :foreign_key => :host_id
+
+  ##As host
+  has_many :guests, :through => :reservations, :class_name => "User"
+  has_many :host_reviews, :through => :listings, :source => :reviews
+
   def check_user_type
     if self.listings.empty?
       self.host = false
@@ -12,25 +20,5 @@ class User < ActiveRecord::Base
       self.host = true
       self.save
     end
-  end
-
-  def guests
-    guests = []
-    self.listings.each do |listing|
-      listing.reservations.each do |reservation|
-        guests << reservation.guest
-      end
-    end
-    guests
-  end
-
-  def hosts
-    self.trips.map do |reservation|
-      reservation.listing.host
-    end
-  end
-
-  def host_reviews
-    self.listings.map {|listing| listing.reviews.flatten}.flatten
   end
 end
