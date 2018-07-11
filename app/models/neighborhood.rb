@@ -4,19 +4,19 @@ class Neighborhood < ActiveRecord::Base
 
   def neighborhood_openings(start_date, end_date)
     date_range = ( start_date .. end_date ).to_a
+    return nil if start_date >= end_date
 
-    if start_date < end_date
-      listings.map do |l|
-        dates_available = l.available(start_d, end_date)
-        # l.available(start_date, end_date).map {|d| date_range.include?(d)}
-        date.each{}
-        l if date_range.all?{|day| l.available(start_date, end_date).include?(day)}
-      end
+    open_listings = listings.map do |l|
+      dates_available = l.available(start_date, end_date)
+      date_range.all?{ |date| dates_available.include?(date)} ? l : nil
     end
 
+    open_listings
   end
 
-  # '2014-05-01', '2014-05-05'
+  #
+  # start_date = Date.parse('2014-05-01'); end_date = Date.parse('2014-05-05')
+  # start_date = Date.parse('2014-01-06'); end_date = Date.parse('2014-01-10')
 
   def self.highest_ratio_res_to_listings
     ratio_arr = all.map do |neighborhood|

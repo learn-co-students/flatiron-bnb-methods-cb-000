@@ -25,6 +25,7 @@ class Listing < ActiveRecord::Base
     date_range - dates_reserved
   end
 
+
   private
 
   # for lifecycle callbacks:

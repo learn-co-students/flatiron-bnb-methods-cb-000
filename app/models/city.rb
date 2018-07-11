@@ -3,7 +3,7 @@ class City < ActiveRecord::Base
   has_many :listings, :through => :neighborhoods
 
   def city_openings
-
+    'in progress'
   end
 
   # '2014-05-01', '2014-05-05'
