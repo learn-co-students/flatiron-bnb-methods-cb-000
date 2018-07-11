@@ -20,11 +20,10 @@ class Listing < ActiveRecord::Base
   end
 
   def available(start_date, end_date) # ('06-01-2014', '10-01-2014')
-    date_range = ( Date.parse(start_date) .. Date.parse(end_date) ).to_a
+    date_range = ( start_date .. end_date ).to_a
     dates_reserved = find_reserved_dates()
     date_range - dates_reserved
   end
-
 
   private
 
