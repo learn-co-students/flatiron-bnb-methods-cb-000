@@ -25,6 +25,24 @@ class Listing < ActiveRecord::Base
     date_range - dates_reserved
   end
 
+  def find_reserved_dates
+    reserved = []
+    self.reservations.each{|r| reserved.concat( (r.checkin .. r.checkout).to_a )}
+    reserved
+  end
+
+  def print_reserved_dates
+    reservations.map{|r| "#{r.checkin} - #{r.checkout}"}
+  end
+=begin
+ start_date = Date.parse('2014-01-08'); end_date = Date.parse('2014-01-09')
+ start_date = Date.parse('2014-01-21'); end_date = Date.parse('2014-04-26')
+ l.reservations.map{|r| "#{r.checkin} - #{r.checkout}"}
+  start_date = Date.parse('06-01-2014'); end_date = Date.parse('10-01-2014')
+  l = Listing.first
+  l.reservations.map{|r| "#{r.checkin} - #{r.checkout}"}
+  l.available(start_date, end_date)
+=end
 
   private
 
@@ -41,9 +59,5 @@ class Listing < ActiveRecord::Base
   # for custom attributes
 
     ## for custom attribute #available
-    def find_reserved_dates
-      reserved = []
-      self.reservations.each{|r| reserved.concat( (r.checkin .. r.checkout).to_a )}
-      reserved
-    end
+
 end

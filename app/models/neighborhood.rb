@@ -6,17 +6,19 @@ class Neighborhood < ActiveRecord::Base
     date_range = ( start_date .. end_date ).to_a
     return nil if start_date >= end_date
 
-    open_listings = listings.map do |l|
+    open_listings = []
+    self.listings.map do |l|
       dates_available = l.available(start_date, end_date)
-      date_range.all?{ |date| dates_available.include?(date)} ? l : nil
+      open_listings << l if date_range.all?{ |date| dates_available.include?(date)}
     end
 
-    open_listings
+     open_listings
   end
 
-  #
-  # start_date = Date.parse('2014-05-01'); end_date = Date.parse('2014-05-05')
-  # start_date = Date.parse('2014-01-06'); end_date = Date.parse('2014-01-10')
+  # start_date = Date.parse('2014-01-09'); end_date = Date.parse('2014-04-27')
+  # start_date = Date.parse('2014-01-21'); end_date = Date.parse('2014-04-26')
+  # l.reservations.map{|r| "#{r.checkin} - #{r.checkout}"}
+  # n.listings.map{|l| l.print_reserved_dates}
 
   def self.highest_ratio_res_to_listings
     ratio_arr = all.map do |neighborhood|

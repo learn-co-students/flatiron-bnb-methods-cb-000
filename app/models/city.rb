@@ -6,8 +6,6 @@ class City < ActiveRecord::Base
     'in progress'
   end
 
-  # '2014-05-01', '2014-05-05'
-
   def self.highest_ratio_res_to_listings
     ratio_arr = all.map do |city|
       listings_count = city.listings.count.to_f
