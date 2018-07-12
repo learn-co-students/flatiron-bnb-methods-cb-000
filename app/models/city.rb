@@ -2,8 +2,12 @@ class City < ActiveRecord::Base
   has_many :neighborhoods
   has_many :listings, :through => :neighborhoods
 
-  def city_openings
-    'in progress'
+  def city_openings(start_date, end_date)
+    start_date = Date.parse(start_date)
+    end_date = Date.parse(end_date)
+    open_listings = []
+    listings.each{ |l| open_listings << l if l.dates_avaliable?(start_date, end_date) }
+    open_listings
   end
 
   def self.highest_ratio_res_to_listings
