@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'city/city_openings'
+
+  get 'city/highest_ratio_res_to_listings'
+
+  get 'city/most_res'
+
   resources :users
 
   resources :listings

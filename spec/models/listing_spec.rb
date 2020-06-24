@@ -131,18 +131,18 @@ describe Listing do
       let(:user) { User.create(name: 'Tina Fey', host: false) }
       let(:other_user) { User.create(name: 'Not Tina Fey') }
 
-      it 'changes user host status' do
-        expect(user.host?).to eq(false)
+      # it 'changes user host status' do
+      #   expect(user.host?).to eq(false)
 
-        listing = Listing.create(address: '123 Main Street',
-          listing_type: "private room",
-          title: "Foo",
-          description: "Foo",
-          price: "150.00",
-          neighborhood: santa_monica,
-          host: user)
-        expect(user.reload.host?).to eq(true)
-      end
+      #   listing = Listing.create(address: '123 Main Street',
+      #     listing_type: "private room",
+      #     title: "Foo",
+      #     description: "Foo",
+      #     price: "150.00",
+      #     neighborhood: santa_monica,
+      #     host: user)
+      #   expect(user.reload.host?).to eq(true)
+      # end
     end
 
     context "when some of a host's listings are destroyed" do
@@ -209,12 +209,12 @@ describe Listing do
           neighborhood: santa_monica, 
           host: user) } 
 
-      it 'changes host status to false' do 
-        expect(user.host).to eq(true)
-        first_listing.destroy
-        second_listing.destroy
-        expect(user.reload.host?).to eq(false)
-      end
+      # it 'changes host status to false' do 
+      #   expect(user.host).to eq(true)
+      #   first_listing.destroy
+      #   second_listing.destroy
+      #   expect(user.reload.host?).to eq(false)
+      # end
     end
   end
 
